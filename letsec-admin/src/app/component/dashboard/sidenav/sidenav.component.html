@@ -1,0 +1,21 @@
+<mat-toolbar>
+    <span>Let Secure</span>
+  </mat-toolbar>
+
+  <section class="sidenav-profile">
+    <img src="" alt="profile_image" />
+    <div class="sidenav-salutation">
+        Hello, {{adminName}}
+    </div>
+  </section>
+
+  <section>
+    <mat-selection-list>
+        <mat-list-item *ngFor="let menu of menuOptions">
+            <div [routerLink]="[menu.linkTo]" routerLinkActive="router-link-active" >
+                <mat-icon mat-list-icon></mat-icon>
+              {{menu.name}}
+            </div>
+        </mat-list-item>
+      </mat-selection-list>
+  </section>

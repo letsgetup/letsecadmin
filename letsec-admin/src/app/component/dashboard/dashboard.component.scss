@@ -1,0 +1,17 @@
+.sidenav-container {
+    width: 100%;
+    height: 100%;
+    // margin: 10px;
+    // border: 1px solid #555;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    .sidenav-container-drawer {
+        // background: grey;
+        height: 100%;
+    }
+    .sidenav-container-content {
+        // background: hotpink;
+    }
+}
