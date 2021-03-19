@@ -1,0 +1,17 @@
+.header-section {
+    padding: 22px 0px 22px 11px;
+    display: flex;
+    webkit-box-shadow: 0 6px 2px -6px black black;
+    -moz-box-shadow: 0 6px 2px -6px black black;
+    box-shadow: 0 6px 2px -6px black;
+    .left-div {
+        flex: 1 0 0;
+    }
+    .right-div {
+        flex: 1 0 0;
+        text-align: right;
+    }
+    .menu-select {
+
+    }
+}

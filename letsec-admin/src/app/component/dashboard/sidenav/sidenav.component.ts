@@ -26,4 +26,8 @@ export class SidenavComponent implements OnInit {
     console.log(this.menuOptions);
   }
 
+  navigatedToPage(e, menu) {
+    console.log("asdas", menu);
+  }
+
 }

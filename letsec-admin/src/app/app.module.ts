@@ -10,6 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavComponent } from './component/dashboard/sidenav/sidenav.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { HomeComponent } from './component/home/home.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { SidenavComponent } from './component/dashboard/sidenav/sidenav.componen
     LoginComponent,
     CardComponent,
     DashboardComponent,
-    SidenavComponent
+    SidenavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatMenuModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

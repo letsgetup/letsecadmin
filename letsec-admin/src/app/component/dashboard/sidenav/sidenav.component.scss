@@ -1,0 +1,38 @@
+.toolbar-wrapper {
+    background: #367fa9;
+    padding: 23px 0 23px 0px;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+}
+.sidenav-profile {
+    padding: 28px 0 22px 3px;
+    img {
+        margin: auto;
+        align-items: center;
+        width: 80px;
+        border-radius: 50%;
+        display: block;
+    }
+    .sidenav-salutation {
+        text-align: center;
+        font-size: 16px;
+        padding: 13px 0 10px 0;
+    }
+}
+
+.menu-list-section {
+    .list-router {
+        padding: 14px 0px 14px 0px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    } 
+    .list-router:hover {
+        background: rgba(0, 0, 0, 0.1);
+        opacity: 0.8;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+    .list-router:nth-child(1) {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}

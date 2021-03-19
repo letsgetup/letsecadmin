@@ -1,18 +1,20 @@
-<mat-toolbar>
-    <span>Let Secure</span>
-  </mat-toolbar>
+<p class="toolbar-wrapper">
+    <mat-toolbar>
+        <span>Let Secure</span>
+    </mat-toolbar>
+</p>
 
   <section class="sidenav-profile">
-    <img src="" alt="profile_image" />
+    <img src="assets/images/avatar5.png" alt="profile_image" />
     <div class="sidenav-salutation">
         Hello, {{adminName}}
     </div>
   </section>
 
-  <section>
+  <section class="menu-list-section">
     <mat-selection-list>
         <mat-list-item *ngFor="let menu of menuOptions">
-            <div [routerLink]="[menu.linkTo]" routerLinkActive="router-link-active" >
+            <div [ngClass]="(step=='step1')?'list-router':'list-router'" (click)="navigatedToPage($event, menu)" [routerLink]="[menu.linkTo]" routerLinkActive="router-link-active" >
                 <mat-icon mat-list-icon></mat-icon>
               {{menu.name}}
             </div>
