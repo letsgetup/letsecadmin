@@ -13,7 +13,7 @@ import { SidenavComponent } from './component/dashboard/sidenav/sidenav.componen
 import { MatMenuModule } from '@angular/material/menu';
 import { HomeComponent } from './component/home/home.component';
 import { MatTableModule } from '@angular/material/table';
-
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +30,10 @@ import { MatTableModule } from '@angular/material/table';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
+  ],
+  exports: [
   ],
   providers: [],
   bootstrap: [AppComponent]
