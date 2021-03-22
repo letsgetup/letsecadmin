@@ -1,31 +1,5 @@
-<!-- <p class="toolbar-wrapper">
-    <mat-toolbar>
-        <span>Let Secure</span>
-    </mat-toolbar>
-</p>
-
-  <section class="sidenav-profile">
-    <img src="assets/images/avatar5.png" alt="profile_image" />
-    <div class="sidenav-salutation">
-        Hello, {{adminName}}
-    </div>
-  </section>
-
-  <section class="menu-list-section">
-    <mat-selection-list>
-        <mat-list-item *ngFor="let menu of menuOptions">
-            <div [ngClass]="(step=='step1')?'list-router':'list-router'" (click)="navigatedToPage($event, menu)" [routerLink]="[menu.linkTo]" routerLinkActive="router-link-active" >
-                <mat-icon mat-list-icon></mat-icon>
-              {{menu.name}}
-            </div>
-        </mat-list-item>
-      </mat-selection-list>
-  </section> -->
-
   <aside class="left-side sidebar-offcanvas"> 
-    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar"> 
-      <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="text-center image"> <img src="assets/img/avatar3.png" class="img-circle rounded" alt="User Image" /> </div>
         <div class="text-center info">
@@ -33,22 +7,8 @@
         </div>
       </div>
       
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu">
-        
-		<li > <a href="index.html"> <i class="fa fa-tachometer" aria-hidden="true"></i> <span>Home</span> </a> </li>
-		<li > <a href="index.html"> <i class="fa fa-list-alt" aria-hidden="true"></i> <span>Agent Management</span> </a> </li>
-		<li > <a href="index.html"> <i class="fa fa-check-square-o" aria-hidden="true"></i> <span>Approved Agents</span> </a> </li>
-		<li > <a href="index.html"> <i class="fa fa-times" aria-hidden="true"></i> <span>Denied Agents</span> </a> </li>  
-		 <li > <a href="index.html"> <i class="fa fa-ban" aria-hidden="true"></i> <span>Blocked Agents</span> </a> </li>
-		   <li > <a href="index.html"> <i class="fa fa-cog" aria-hidden="true"></i> <span>Settings</span> </a> </li>
-		 		 <li > <a href="index.html"> <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Logout</span> </a> </li>
-		  
-		  
-		  
-		  
-       
-      </ul>
+        <ul class="sidebar-menu">
+            <li *ngFor="let menu of menuOptions"> <a (click)="navigatedToPage(menu)"> <i class={{menu.icon}} aria-hidden="true"></i> <span>{{menu.name}}</span> </a> </li>
+        </ul>
     </section>
-    <!-- /.sidebar --> 
   </aside>

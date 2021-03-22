@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface Menulist {
   name: string;
@@ -13,21 +14,25 @@ export interface Menulist {
 export class SidenavComponent implements OnInit {
   private adminName: any;
   private menuOptions: Menulist[] = [
-    {name: 'Home', linkTo: '/home', icon: ''},
-    {name: 'Agent managemant', linkTo: '', icon: ''},
-    {name: 'Settings', linkTo: '/settings', icon: ''},
-    {name: 'Logout', linkTo: '/login', icon: ''}
+    {name: 'Home', linkTo: '/home', icon: 'fa fa-tachometer'},
+    {name: 'Agent managemant', linkTo: '/allagents', icon: 'fa fa-list-alt'},
+    {name: 'Approved agents', linkTo: '/settings', icon: 'fa fa-check-square-o'},
+    {name: 'Denied Agents', linkTo: '/home', icon: 'fa fa-times'},
+    {name: 'Blocked Agents', linkTo: '/home', icon: 'fa fa-ban'},
+    {name: 'Settings', linkTo: '/home', icon: 'fa fa-cog'},
+    {name: 'Logout', linkTo: '/login', icon: 'fa fa-sign-out'}
   ];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.adminName = "Jane";
     console.log(this.menuOptions);
   }
 
-  navigatedToPage(e, menu) {
-    console.log("asdas", menu);
+  navigatedToPage(menu: any) {
+    this.router.navigate([menu.linkTo]);
+
   }
 
 }

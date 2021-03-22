@@ -2465,6 +2465,7 @@ Component: timeline
 }
 .skin-blue .sidebar > .sidebar-menu > li > a {
   margin-right: 1px;
+  cursor: pointer;
 }
 .skin-blue .sidebar > .sidebar-menu > li > a:hover,
 .skin-blue .sidebar > .sidebar-menu > li.active > a {
@@ -3388,4 +3389,13 @@ fieldset[disabled] .btn-vk.active {
 .btn-vk .badge {
   color: #587ea3;
   background-color: #ffffff;
+}
+
+
+
+.login-bg {
+  background: url(../images/login-bg.png) no-repeat;
+  background-size: cover;
+  max-width: 704px;
+  margin: 0px auto
 }
