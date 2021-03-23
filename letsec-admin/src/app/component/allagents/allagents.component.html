@@ -16,12 +16,13 @@
                             <th></th>
                         </tr>
                         <tr *ngFor="let item of allAgentList; let i = index">
-                            <td align="center"><input type="checkbox" name="checkbox" id="checkbox"></td>
+                            <td align="center">{{i +1}}</td>
                             <td><a href="#">{{item.firstname}} {{item.middlename}} {{item.lastname}}</a></td>
                             <td>{{item.email}}</td>
                             <td class="text-danger">{{item.mobile}}</td>
                             <td class="text-danger">
-                                <button>Details</button>
+                                <button (click)="agentApprovalDenyClk(item, 2)">Approve</button>
+                                <button (click)="agentApprovalDenyClk(item, 3)">Deny</button>
                             </td>
                         </tr>
                     </table>

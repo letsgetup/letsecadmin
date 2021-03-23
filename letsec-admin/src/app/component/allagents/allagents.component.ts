@@ -16,7 +16,7 @@ export class AllagentsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.ajaxService.getAllAgentDetails('asd').pipe().subscribe(res => {
+    this.ajaxService.getAllAgentDetails().pipe().subscribe(res => {
       if(res && res.isSuccess) {
         // console.log(res);
         this.dataService.allAgentsData(res.agentdetails);
@@ -28,5 +28,16 @@ export class AllagentsComponent implements OnInit {
     });
     // console.log(this.allAgentList);
   }
+
+  agentApprovalDenyClk(agentObj: any, val: Number) {
+    // console.log(agentObj["status"]);
+    agentObj["status"] = val;
+    this.ajaxService.updateAgentDetails(agentObj).pipe().subscribe(res => {
+      if(res && res.isSuccess) {
+        console.log(res);
+      }
+    });
+    console.log(agentObj);
+  };
 
 }
