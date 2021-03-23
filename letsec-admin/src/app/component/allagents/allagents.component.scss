@@ -1,0 +1,31 @@
+* {
+    outline: none;
+}
+.tohide {
+    display: none;
+}
+.approved-btn {
+    background: none;
+    border: none;
+    color: #43a047;
+}
+.approve-btn, .deny-btn {
+    background: #3c8dbc;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    font-size: 12px;
+    padding: 2px 10px;
+}
+.deny-btn {
+    background: #e53935;
+    margin-left: 5px;
+}
+.approve-btn:hover, .deny-btn:hover {
+    opacity: 0.7;
+}
+.denied-btn {
+    background: none;
+    border: none;
+    color: #e53935;
+}

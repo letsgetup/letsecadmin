@@ -23,7 +23,7 @@ export class AllagentsComponent implements OnInit {
       }
     });
     this.dataService.allAgentsObs.subscribe(itm => {
-      // console.log(itm);
+      console.log(itm);
       this.allAgentList = itm;
     });
     // console.log(this.allAgentList);
