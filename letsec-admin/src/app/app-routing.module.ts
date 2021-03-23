@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { LoginComponent } from './component/login/login.component';
-import { AllagentsComponent } from './component/allagents/allagents.component';
+
+const dashboardcomp = () => import('./module/dashboard/dashboard.module').then(m => m.DashboardModule);
 
 const routes: Routes = [
-  { path: 'home', component: DashboardComponent},
+  { path: 'home', loadChildren: dashboardcomp},
   { path: 'login', component: LoginComponent},
-  { path: 'allagents', component: AllagentsComponent},
-  { path: '**', redirectTo: 'home' }
+  { path: '**', redirectTo: 'home' },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
   
 ];
 

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  agentLoginform: FormGroup;
+  agentLoginform: any = FormGroup;
 
   constructor(private formBuilder: FormBuilder, private router: Router) { }
 

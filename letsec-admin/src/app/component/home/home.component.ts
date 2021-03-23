@@ -39,13 +39,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
   }
   constructor() { }
 

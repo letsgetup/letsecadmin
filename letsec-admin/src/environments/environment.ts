@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'https://admin-lets-secure.azurewebsites.net/api',
+  backOfcUrl: 'https://letssecure-insurance-backoffice-dev.azurewebsites.net/api',
   apiPhp: 'https://apiphpletsec.azurewebsites.net/index.php/api',
   azureApi: 'http://letssecure.centralindia.cloudapp.azure.com/',
   azureApiUrl: 'http://apils.centralindia.cloudapp.azure.com',

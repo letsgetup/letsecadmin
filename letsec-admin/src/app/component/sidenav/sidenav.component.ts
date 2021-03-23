@@ -13,9 +13,9 @@ export interface Menulist {
 })
 export class SidenavComponent implements OnInit {
   private adminName: any;
-  private menuOptions: Menulist[] = [
-    {name: 'Home', linkTo: '/home', icon: 'fa fa-tachometer'},
-    {name: 'Agent managemant', linkTo: '/allagents', icon: 'fa fa-list-alt'},
+  public menuOptions: Menulist[] = [
+    {name: 'Home', linkTo: '/home/dashboard', icon: 'fa fa-tachometer'},
+    {name: 'Agent managemant', linkTo: '/home/allagents', icon: 'fa fa-list-alt'},
     {name: 'Approved agents', linkTo: '/settings', icon: 'fa fa-check-square-o'},
     {name: 'Denied Agents', linkTo: '/home', icon: 'fa fa-times'},
     {name: 'Blocked Agents', linkTo: '/home', icon: 'fa fa-ban'},
@@ -27,12 +27,10 @@ export class SidenavComponent implements OnInit {
 
   ngOnInit(): void {
     this.adminName = "Jane";
-    console.log(this.menuOptions);
   }
 
   navigatedToPage(menu: any) {
     this.router.navigate([menu.linkTo]);
-
   }
 
 }

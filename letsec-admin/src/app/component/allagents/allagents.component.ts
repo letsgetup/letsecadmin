@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {AjaxServiceService} from './../../services/ajax-service/ajax-service.service';
 @Component({
   selector: 'app-allagents',
   templateUrl: './allagents.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllagentsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ajaxService : AjaxServiceService) { }
 
   ngOnInit(): void {
+    console.log("asd")
+    this.ajaxService.getAllAgentDetails('asd').pipe().subscribe(res => {
+      console.log(res);
+    })
   }
 
 }
