@@ -10,45 +10,19 @@
                     <table class="table table-striped">
                         <tr>
                             <th class="text-center">Select</th>
-                            <th>Country</th>
-                            <th>Companies</th>
-                            <th>Lead Status</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th></th>
                         </tr>
-                        <tr>
+                        <tr *ngFor="let item of allAgentList; let i = index">
                             <td align="center"><input type="checkbox" name="checkbox" id="checkbox"></td>
-                            <td><a href="#">USA</a></td>
-                            <td>HDFC</td>
-                            <td class="text-danger">Pending</td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type="checkbox" name="checkbox2" id="checkbox2"></td>
-                            <td><a href="#">India</a></td>
-                            <td>IFFCO</td>
-                            <td class="text-success">Active</td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type="checkbox" name="checkbox3" id="checkbox3"></td>
-                            <td><a href="#">Britain</a></td>
-                            <td>SBI Genenral Insurance</td>
-                            <td  class="text-danger">Pending</td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type="checkbox" name="checkbox4" id="checkbox4"></td>
-                            <td><a href="#">Brazil</a></td>
-                            <td>Digit</td>
-                            <td  class="text-danger">Pending</td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type="checkbox" name="checkbox5" id="checkbox5"></td>
-                            <td><a href="#">China</a></td>
-                            <td>Reliance</td>
-                            <td  class="text-danger">Pending</td>
-                        </tr>
-                        <tr>
-                            <td align="center"><input type="checkbox" name="checkbox6" id="checkbox6"></td>
-                            <td><a href="#">Australia</a></td>
-                            <td>Argo</td>
-                            <td  class="text-success">Active</td>
+                            <td><a href="#">{{item.firstname}} {{item.middlename}} {{item.lastname}}</a></td>
+                            <td>{{item.email}}</td>
+                            <td class="text-danger">{{item.mobile}}</td>
+                            <td class="text-danger">
+                                <button>Details</button>
+                            </td>
                         </tr>
                     </table>
                 </div>

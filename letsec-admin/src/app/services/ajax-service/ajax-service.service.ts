@@ -18,7 +18,7 @@ export class AjaxServiceService {
   public getAllAgentDetails(agentId: string): Observable<any> {
     return this.http.get<any>(`${environment.backOfcUrl}/Agent/getagentdetails/ALLAGENTS`).pipe(
       map((res) => {
-        console.log(res);
+        // console.log(res);
         return res;
       }));
   }

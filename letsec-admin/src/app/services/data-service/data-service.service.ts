@@ -10,16 +10,16 @@ export class DataServiceService {
   constructor() { }
 
   // Login data service
-	private loginDetails = new BehaviorSubject([]);
-	loginDetailsObs = this.loginDetails.asObservable();
+	private allAgents = new BehaviorSubject([]);
+	allAgentsObs = this.allAgents.asObservable();
 
   // Login data
-	loginDetailsResp(loginDetailsRespItms: any) {
-		this.loginDetails.next(loginDetailsRespItms);
+	allAgentsData(allAgentsDataItms: any) {
+		this.allAgents.next(allAgentsDataItms);
 	}
-	loginDetailsRespDataChange() {
-		return this.loginDetails;
+	allAgentsDataDataChange() {
+		return this.allAgents;
 	}
 
-  
+
 }

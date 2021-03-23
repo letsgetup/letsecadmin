@@ -6,6 +6,7 @@ import { LayoutComponent } from '../../component/layout/layout.component';
 import { SidenavComponent } from '../../component/sidenav/sidenav.component';
 import { HomeComponent } from '../../component/home/home.component';
 import { HeaderComponent } from '../../component/header/header.component';
+import { AllagentsComponent } from '../../component/allagents/allagents.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HeaderComponent } from '../../component/header/header.component';
     LayoutComponent, 
     SidenavComponent, 
     HomeComponent, 
-    HeaderComponent
+    HeaderComponent,
+    AllagentsComponent
   ],
   imports: [
     CommonModule,
