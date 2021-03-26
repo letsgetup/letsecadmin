@@ -298,9 +298,9 @@ img {
   border-radius: 0 !important;
 }
 /* Change the color of the striped tables */
-.table-striped > ttr:nth-child(odd) > td,
-.table-striped > ttr:nth-child(odd) > th {
-  background-color: #f3f4f5;
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f3f4f5 !important;
 }
 /* .text-center in tables */
 table.text-center td,
