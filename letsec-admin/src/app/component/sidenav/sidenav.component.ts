@@ -13,6 +13,7 @@ export interface Menulist {
 })
 export class SidenavComponent implements OnInit {
   private adminName: any;
+  selectedItem: any;
   public menuOptions: Menulist[] = [
     {name: 'Home', linkTo: '/home/dashboard', icon: 'fa fa-tachometer'},
     {name: 'Agent managemant', linkTo: '/home/allagents', icon: 'fa fa-list-alt'},
@@ -29,8 +30,9 @@ export class SidenavComponent implements OnInit {
     this.adminName = "Jane";
   }
 
-  navigatedToPage(menu: any) {
+  navigatedToPage(e:any, menu: any) {
     this.router.navigate([menu.linkTo]);
+    this.selectedItem = menu;
   }
 
 }

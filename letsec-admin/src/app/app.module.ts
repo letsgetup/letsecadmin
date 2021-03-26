@@ -13,11 +13,14 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 // import { DashboardModule } from './module/dashboard/dashboard.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AgentdetailsComponent } from './component/agentdetails/agentdetails.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    AgentdetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatFormFieldModule
     // DashboardModule
   ],
   exports: [

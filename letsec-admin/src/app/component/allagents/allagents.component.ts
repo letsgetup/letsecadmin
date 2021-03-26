@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {AjaxServiceService} from './../../services/ajax-service/ajax-service.service';
+import { AjaxServiceService } from './../../services/ajax-service/ajax-service.service';
 import { DataServiceService } from './../../services/data-service/data-service.service';
+import { LocalStorageService } from './../../services/local-storage/local-storage.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-allagents',
   templateUrl: './allagents.component.html',
@@ -10,7 +13,9 @@ export class AllagentsComponent implements OnInit {
   allAgentList: any[] = [];
   constructor(
     private ajaxService : AjaxServiceService, 
-    private dataService : DataServiceService
+    private dataService : DataServiceService,
+    private localStorageService : LocalStorageService,
+    private router: Router
   ) {
     this.allAgentList = [];
   }
@@ -39,5 +44,16 @@ export class AllagentsComponent implements OnInit {
     });
     console.log(agentObj);
   };
+
+  tableHeadingClick() {
+    this.allAgentList.reverse();
+    console.log("asd")
+  }
+
+  agentDetailsRoute(item: any) {
+    console.log("item ", item);
+    this.localStorageService.setSelectedAgentId(item.agentid);
+    this.router.navigate(['home/agentdetails']);
+  }
 
 }

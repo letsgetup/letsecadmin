@@ -4,37 +4,40 @@
         <h1 style="display: inline-block"> Agent Leads</h1>
     </section>
     <section class="content"> 
+        
         <div class="row"> 
             <div class="col-md-12">
                 <div class="table-responsive">
                     <table class="table table-striped">
-                        <tr>
-                            <th class="text-center">Select</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Mobile</th>
-                            <th></th>
-                        </tr>
-                        <tr *ngFor="let item of allAgentList; let i = index">
-                            <td align="center">{{i +1}}</td>
-                            <td><a href="#">{{item.firstname}} {{item.middlename}} {{item.lastname}}</a></td>
-                            <td>{{item.email}}</td>
-                            <td class="text-danger">{{item.mobile}}</td>
-                            <!-- <td class="text-danger" [ngClass]="item.status !== 2 ? 'toshow' : 'tohide' "> -->
-                            <td class="text-danger">
-                                <!-- [ngClass]="[menu1 ? 'class1' : '',  menu2 ? 'class1' : '', (something && (menu1 || menu2)) ? 'class2' : '']"> -->
-                                <button 
-                                    (click)="item.status === 2 ? '' : agentApprovalDenyClk(item, 2)" 
-                                    [ngClass]="[item.status === 2 ? 'approved-btn' : 'approve-btn', item.status === 3 ? 'tohide' : 'toshow' ]">
-                                    {{item.status === 2 ? 'Approved' : 'Approve'}}
-                                </button>
-                                <button 
-                                    [ngClass]="[item.status === 2 ? 'tohide' : 'toshow', item.status === 3 ? 'denied-btn' : 'deny-btn'] " 
-                                    (click)="item.status === 3 ? '' : agentApprovalDenyClk(item, 3)">
-                                    {{item.status == 3 ? 'Denied' : 'Deny'}}
-                                </button>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th class="text-center" (click)="tableHeadingClick()">Sl. No.</th>
+                                <th (click)="tableHeadingClick()">Name</th>
+                                <th (click)="tableHeadingClick()">Email</th>
+                                <th (click)="tableHeadingClick()">Mobile</th>
+                                <th></th>
+                            </tr>
+                            <tr *ngFor="let item of allAgentList; let i = index">
+                                <td align="center">{{i +1}}</td>
+                                <td><a (click)="agentDetailsRoute(item)" class="name-td">{{item.firstname}} {{item.middlename}} {{item.lastname}}</a></td>
+                                <td>{{item.email}}</td>
+                                <td class="text-danger">{{item.mobile}}</td>
+                                <!-- <td class="text-danger" [ngClass]="item.status !== 2 ? 'toshow' : 'tohide' "> -->
+                                <td class="text-danger">
+                                    <!-- [ngClass]="[menu1 ? 'class1' : '',  menu2 ? 'class1' : '', (something && (menu1 || menu2)) ? 'class2' : '']"> -->
+                                    <button 
+                                        (click)="item.status === 2 ? '' : agentApprovalDenyClk(item, 2)" 
+                                        [ngClass]="[item.status === 2 ? 'approved-btn' : 'approve-btn', item.status === 3 ? 'tohide' : 'toshow' ]">
+                                        {{item.status === 2 ? 'Approved' : 'Approve'}}
+                                    </button>
+                                    <button 
+                                        [ngClass]="[item.status === 2 ? 'tohide' : 'toshow', item.status === 3 ? 'denied-btn' : 'deny-btn'] " 
+                                        (click)="item.status === 3 ? '' : agentApprovalDenyClk(item, 3)">
+                                        {{item.status == 3 ? 'Denied' : 'Deny'}}
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>    

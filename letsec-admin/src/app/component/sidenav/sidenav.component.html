@@ -7,7 +7,7 @@
         </div>
       </div>
         <ul class="sidebar-menu">
-            <li *ngFor="let menu of menuOptions"> <a (click)="navigatedToPage(menu)"> <i class={{menu.icon}} aria-hidden="true"></i> <span>{{menu.name}}</span> </a> </li>
+            <li *ngFor="let menu of menuOptions" [ngClass]="{'selected': selectedItem == menu}"> <a (click)="navigatedToPage($event, menu)"> <i class={{menu.icon}} aria-hidden="true"></i> <span>{{menu.name}}</span> </a> </li>
         </ul>
     </section>
   </aside>

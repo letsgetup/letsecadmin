@@ -1,0 +1,12 @@
+.selected {
+    background: #3c8dbc;
+    span {
+        color: #fff;
+    }
+}
+.selected a:hover {
+    background: #3c8dbc !important;
+    span {
+        color: #fff;
+    }
+}

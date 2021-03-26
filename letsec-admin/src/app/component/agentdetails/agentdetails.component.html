@@ -1,0 +1,116 @@
+<!-- aadharcard: "7678675738789878"
+accountnumber: "9999999999999"
+accounttype: "bhari acc"
+address1: "Address line 1"
+address2: "ddsaffghjrtgfb"
+address3: "trrffgggytrd"
+agentid: "AGNT-210302235319"
+bankname: "Mazi bank"
+branchname: "Mazya Gallitli"
+city: "Latur"
+createdat: "2021-03-02T23:53:20"
+dob: "1900-02-27T00:00:00"
+document1: "NONE"
+document2: "yestofffffffffffffffffffffffffffffffff"
+document3: "yestofffffffffffffffff"
+document4: "yestofffffffffffffffffffffffff"
+email: "nikhildev@test.com"
+extramobile: "4345656767"
+firstname: "Nik1"
+gender: "male"
+gsTnumber: "tght56545y"
+hash: "hash"
+id: 1
+ifsccode: "MAZA0003655"
+isActive: true
+lastname: "Dev1"
+middlename: "vijay"
+mobile: "9834838855"
+pancard: "9834838855"
+password: "pass123"
+pincode: "413517"
+qualification: "Graduate"
+state: "Maharashtra"
+status: 2
+updatedat: "2021-03-23T13:50:14" -->
+<aside class="right-side">
+    <div *ngFor="let item of agentDetailArr; let i = index">
+        <div class="agent-details-div">
+            <label>Personal Information</label>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Name</mat-label>
+                <input readonly matInput value="{{item.firstname}} {{item.middlename}} {{item.lastname}}">
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Gender</mat-label>
+                <input readonly matInput value={{item.gender}}>
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Email</mat-label>
+                <input readonly matInput value={{item.email}}>
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Qualification</mat-label>
+                <input readonly matInput value="{{item.qualification}}">
+            </mat-form-field>
+        </div>
+
+        <div class="agent-details-div">
+            <label>Address Information</label>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Aadhar card</mat-label>
+                <input readonly matInput value={{item.aadharcard}}>
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Account number</mat-label>
+                <input readonly matInput value={{item.accountnumber}}>
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Account type</mat-label>
+                <input readonly matInput value={{item.accounttype}}>
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Address</mat-label>
+                <input readonly matInput value="{{item.address1}} {{item.address2}} {{item.address3}}">
+            </mat-form-field>
+        </div>
+
+        <div class="agent-details-div">
+            <label>Bank Information</label>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Aadhar card</mat-label>
+                <input readonly matInput value={{item.aadharcard}}>
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Account number</mat-label>
+                <input readonly matInput value={{item.accountnumber}}>
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Account type</mat-label>
+                <input readonly matInput value={{item.accounttype}}>
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Address</mat-label>
+                <input readonly matInput value="{{item.address1}} {{item.address2}} {{item.address3}}">
+            </mat-form-field>
+        </div>
+        <!-- {{item.bankname}}
+        {{item.branchname}}
+        {{item.city}}
+        {{item.createdat}}
+        {{item.dob}}
+        {{item.document1}}
+        {{item.document2}}
+        {{item.document3}}
+        {{item.document4}}
+        {{item.email}}
+        {{item.extramobile}}
+        {{item.firstname}}
+        {{item.gender}}
+        {{item.gsTnumber}}
+        {{item.hash}}
+        {{item.id}}
+        {{item.ifsccode}}
+        {{item.isActive}} -->
+    </div>
+</aside>
