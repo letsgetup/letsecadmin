@@ -26,14 +26,14 @@
                                 <td class="text-danger">
                                     <!-- [ngClass]="[menu1 ? 'class1' : '',  menu2 ? 'class1' : '', (something && (menu1 || menu2)) ? 'class2' : '']"> -->
                                     <button 
-                                        (click)="item.status === 2 ? '' : agentApprovalDenyClk(item, 2)" 
-                                        [ngClass]="[item.status === 2 ? 'approved-btn' : 'approve-btn', item.status === 3 ? 'tohide' : 'toshow' ]">
-                                        {{item.status === 2 ? 'Approved' : 'Approve'}}
+                                        (click)="item.status === 3 ? '' : agentApprovalDenyClk(item, 3)" 
+                                        [ngClass]="[item.status === 3 ? 'approved-btn' : 'approve-btn', item.status === 2 ? 'tohide' : 'toshow' ]">
+                                        {{item.status === 3 ? 'Approved' : 'Approve'}}
                                     </button>
                                     <button 
-                                        [ngClass]="[item.status === 2 ? 'tohide' : 'toshow', item.status === 3 ? 'denied-btn' : 'deny-btn'] " 
-                                        (click)="item.status === 3 ? '' : agentApprovalDenyClk(item, 3)">
-                                        {{item.status == 3 ? 'Denied' : 'Deny'}}
+                                        [ngClass]="[item.status === 3 ? 'tohide' : 'toshow', item.status === 2 ? 'denied-btn' : 'deny-btn'] " 
+                                        (click)="item.status === 2 ? '' : agentApprovalDenyClk(item, 2)">
+                                        {{item.status == 2 ? 'Denied' : 'Deny'}}
                                     </button>
                                 </td>
                             </tr>

@@ -22,17 +22,9 @@ gsTnumber: "tght56545y"
 hash: "hash"
 id: 1
 ifsccode: "MAZA0003655"
-isActive: true
-lastname: "Dev1"
-middlename: "vijay"
-mobile: "9834838855"
-pancard: "9834838855"
 password: "pass123"
 pincode: "413517"
-qualification: "Graduate"
-state: "Maharashtra"
-status: 2
-updatedat: "2021-03-23T13:50:14" -->
+state: "Maharashtra"-->
 <aside class="right-side">
     <div *ngFor="let item of agentDetailArr; let i = index">
         <div class="agent-details-div">
@@ -58,59 +50,41 @@ updatedat: "2021-03-23T13:50:14" -->
         <div class="agent-details-div">
             <label>Address Information</label>
             <mat-form-field class="agent-form-filed">
-                <mat-label>Aadhar card</mat-label>
-                <input readonly matInput value={{item.aadharcard}}>
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Account number</mat-label>
-                <input readonly matInput value={{item.accountnumber}}>
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Account type</mat-label>
-                <input readonly matInput value={{item.accounttype}}>
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Address</mat-label>
+                <mat-label>Complete address</mat-label>
                 <input readonly matInput value="{{item.address1}} {{item.address2}} {{item.address3}}">
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>City</mat-label>
+                <input readonly matInput value={{item.city}}>
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>State</mat-label>
+                <input readonly matInput value={{item.state}}>
+            </mat-form-field>
+            <mat-form-field class="agent-form-filed">
+                <mat-label>Pincode</mat-label>
+                <input readonly matInput value={{item.pincode}}>
             </mat-form-field>
         </div>
 
         <div class="agent-details-div">
             <label>Bank Information</label>
             <mat-form-field class="agent-form-filed">
-                <mat-label>Aadhar card</mat-label>
-                <input readonly matInput value={{item.aadharcard}}>
+                <mat-label>Bank name</mat-label>
+                <input readonly matInput value={{item.bankname}}>
             </mat-form-field>
             <mat-form-field class="agent-form-filed">
-                <mat-label>Account number</mat-label>
-                <input readonly matInput value={{item.accountnumber}}>
+                <mat-label>Branch name</mat-label>
+                <input readonly matInput value={{item.branchname}}>
             </mat-form-field>
             <mat-form-field class="agent-form-filed">
-                <mat-label>Account type</mat-label>
-                <input readonly matInput value={{item.accounttype}}>
+                <mat-label>PAN Card</mat-label>
+                <input readonly matInput value={{item.pancard}}>
             </mat-form-field>
             <mat-form-field class="agent-form-filed">
-                <mat-label>Address</mat-label>
-                <input readonly matInput value="{{item.address1}} {{item.address2}} {{item.address3}}">
+                <mat-label>IFSC</mat-label>
+                <input readonly matInput value="{{item.ifsccode}}">
             </mat-form-field>
         </div>
-        <!-- {{item.bankname}}
-        {{item.branchname}}
-        {{item.city}}
-        {{item.createdat}}
-        {{item.dob}}
-        {{item.document1}}
-        {{item.document2}}
-        {{item.document3}}
-        {{item.document4}}
-        {{item.email}}
-        {{item.extramobile}}
-        {{item.firstname}}
-        {{item.gender}}
-        {{item.gsTnumber}}
-        {{item.hash}}
-        {{item.id}}
-        {{item.ifsccode}}
-        {{item.isActive}} -->
     </div>
 </aside>
