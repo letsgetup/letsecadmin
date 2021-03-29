@@ -7,7 +7,8 @@ import { SidenavComponent } from '../../component/sidenav/sidenav.component';
 import { HomeComponent } from '../../component/home/home.component';
 import { HeaderComponent } from '../../component/header/header.component';
 import { AllagentsComponent } from '../../component/allagents/allagents.component';
-
+import { MatTreeModule } from '@angular/material/tree';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { AllagentsComponent } from '../../component/allagents/allagents.componen
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    MatTreeModule,
+    MatExpansionModule
   ]
 })
 export class DashboardModule { }

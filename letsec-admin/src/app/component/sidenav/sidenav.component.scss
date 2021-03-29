@@ -10,3 +10,16 @@
         color: #fff;
     }
 }
+.sub-menu {
+    border-top: 1px solid #fff;
+    margin-right: 1px;
+    cursor: pointer;
+    padding: 12px 5px 12px 37px;
+    display: block;
+    .fa {
+        width: 20px;
+    }
+}
+.sub-menu-chev {
+    float: right;
+}
