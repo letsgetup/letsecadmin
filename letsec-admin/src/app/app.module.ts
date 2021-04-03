@@ -18,12 +18,16 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
 // import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 // import {MatListModule} from '@angular/material/list';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ApprovedagentComponent } from './component/approvedagent/approvedagent.component';
+import { DeniedagentsComponent } from './component/deniedagents/deniedagents.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AgentdetailsComponent,
+    ApprovedagentComponent,
+    DeniedagentsComponent,
   ],
   imports: [
     BrowserModule,

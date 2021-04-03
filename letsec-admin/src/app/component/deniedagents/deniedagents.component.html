@@ -1,0 +1,32 @@
+
+<aside class="right-side"> 
+    <section class="content-header">
+        <h1 style="display: inline-block"> Denied Agents</h1>
+    </section>
+    <section class="content"> 
+        
+        <div class="row"> 
+            <div class="col-md-12">
+                <div class="table-responsive  bg-white border">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <th class="text-center" (click)="tableHeadingClick()">Sl. No.</th>
+                                <th (click)="tableHeadingClick()">Name</th>
+                                <th (click)="tableHeadingClick()">Email</th>
+                                <th (click)="tableHeadingClick()">Mobile</th>
+                                <th></th>
+                            </tr>
+                            <tr *ngFor="let item of deniedAgentList; let i = index">
+                                <td align="center">{{i +1}}</td>
+                                <td><a (click)="agentDetailsRoute(item)" class="name-td">{{item.firstname}} {{item.middlename}} {{item.lastname}}</a></td>
+                                <td>{{item.email}}</td>
+                                <td class="text-danger">{{item.mobile}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>    
+        </div>
+    </section>
+</aside>

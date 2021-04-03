@@ -30,6 +30,10 @@ export class AllagentsComponent implements OnInit {
     this.dataService.allAgentsObs.subscribe(itm => {
       console.log(itm);
       this.allAgentList = itm;
+      let approvedLs = this.allAgentList.filter(item => item.status === 3);
+      this.dataService.approvedAgentData(approvedLs);
+      let deniedLs = this.allAgentList.filter(item => item.status === 2);
+      this.dataService.deniedAgentData(deniedLs);
     });
     // console.log(this.allAgentList);
   }

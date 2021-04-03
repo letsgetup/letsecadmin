@@ -4,6 +4,8 @@ import { LayoutComponent } from '../../component/layout/layout.component';
 import { AllagentsComponent } from '../../component/allagents/allagents.component';
 import { HomeComponent } from '../../component/home/home.component';
 import { AgentdetailsComponent } from '../../component/agentdetails/agentdetails.component';
+import { ApprovedagentComponent } from '../../component/approvedagent/approvedagent.component';
+import { DeniedagentsComponent } from '../../component/deniedagents/deniedagents.component';
 
 const routes: Routes = [
   { 
@@ -21,6 +23,14 @@ const routes: Routes = [
       {
         path: 'agentdetails',
         component: AgentdetailsComponent
+      },
+      {
+        path: 'approvedagents',
+        component: ApprovedagentComponent
+      },
+      {
+        path: 'deniedagents',
+        component: DeniedagentsComponent
       }
     ]
   }

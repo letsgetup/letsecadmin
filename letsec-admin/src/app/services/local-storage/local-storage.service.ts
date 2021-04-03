@@ -17,4 +17,14 @@ export class LocalStorageService {
 	removeSelectedAgentId() {
 		return localStorage.removeItem('selected_agent_id');
 	}
+
+
+	removeAccessToken() {
+		return localStorage.removeItem('ACCESS_TOKEN');
+	}
+
+	clearLocalStorage() {
+		this.removeAccessToken();
+		this.removeSelectedAgentId();
+	}
 }
