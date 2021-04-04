@@ -47,11 +47,9 @@ export class AllagentsComponent implements OnInit {
 
   tableHeadingClick() {
     this.allAgentList.reverse();
-    console.log("asd")
   }
 
   agentDetailsRoute(item: any) {
-    console.log("item ", item);
     this.localStorageService.setSelectedAgentId(item.agentid);
     this.router.navigate(['home/agentdetails']);
   }

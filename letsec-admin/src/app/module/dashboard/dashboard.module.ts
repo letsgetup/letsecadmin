@@ -9,6 +9,7 @@ import { HeaderComponent } from '../../component/header/header.component';
 import { AllagentsComponent } from '../../component/allagents/allagents.component';
 import { MatTreeModule } from '@angular/material/tree';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     CommonModule,
     DashboardRoutingModule,
     MatTreeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatMenuModule
   ]
 })
 export class DashboardModule { }
