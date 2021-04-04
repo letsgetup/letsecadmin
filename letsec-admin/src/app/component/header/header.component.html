@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <header class="header"> 
     <a class="logo logo-heading" (click)="navigateToHome()"> LetSecure </a> 
       <nav class="navbar navbar-static-top" role="navigation">
@@ -133,4 +134,53 @@
                       </ul>
                   </div>
               </nav>
+=======
+<!-- <header class="header-section">
+    <div class="left-div">
+        <img src="assets/images/icons/menu.svg" />
+    </div>
+    <div class="right-div">
+        <img src="assets/images/icons/notification.svg" />
+        <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+        <div class="menu-select">
+                <button mat-button [matMenuTriggerFor]="menu">
+                    <img src="assets/images/icons/notification.svg" alt="icon">
+                    Menu
+                    <img src="assets/images/icons/notification.svg" alt="icon">
+                </button>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item>My Profile</button>
+            <button mat-menu-item [routerLink]="['/login']" routerLinkActive="router-link-active" >Logout</button>
+            </mat-menu>
+        </div>
+
+    </div>
+</header> -->
+
+
+<header class="header"> <a href="index.html" class="logo"> 
+    <!-- Add the class icon to your logo image or logo icon to add the margining --> 
+    LetSecure </a> 
+    <!-- Header Navbar: style can be found in header.less -->
+    
+    <div class="d-flex flex-column flex-md-row align-items-center px-md-4 border-bottom shadow navbar">
+        <h1 class="my-0 mr-md-auto font-weight-normal text-white">Admin Module</h1>
+        <nav class="my-2 my-md-0 mr-md-3 d-inline-block">
+                 <a class="p-2 text-dark" href="#"><button type="button" class="btn btn-sm btn-info">
+                    <i class="fa fa-bell mr-2" aria-hidden="true"></i> Notifications <span class="badge badge-light">4</span>
+          </button></a>
+          <div class="dropdown">
+            <button class="dropbtn btn btn-sm btn-info"><i class="fa fa-user mr-2" aria-hidden="true"></i>Jane Doe</button>
+            <div class="dropdown-content">
+              <a href="#">Profile</a>
+              <a href="#">Sales</a>
+              <a href="#" class="bg-light border-top">Signout</a>
+            </div>
+          </div>
+          
+        </nav>
+       
+      </div>
+    
+>>>>>>> 68d9dbb... Fixed ui changes for admin dashboard
   </header>

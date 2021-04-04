@@ -26,7 +26,8 @@ password: "pass123"
 pincode: "413517"
 state: "Maharashtra"-->
 <aside class="right-side">
-    <div *ngFor="let item of agentDetailArr; let i = index">
+    <div *ngFor="let item of agentDetailArr; let i = index" class="row m-0">
+        <!--
         <div class="agent-details-div">
             <label>Personal Information</label>
             <mat-form-field class="agent-form-filed">
@@ -46,7 +47,56 @@ state: "Maharashtra"-->
                 <input readonly matInput value="{{item.qualification}}">
             </mat-form-field>
         </div>
+-->
+<div class="col-md-4 col-sm-12 mt-3">
+    <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h3 class="mb-0"><i _ngcontent-swk-c133="" aria-hidden="true" class="fa fa-user mr-2"></i>Personal Information</h3>
+        </div>
+        <div class="card-body" style="height:150px">
+          <h2 class="font-weight-normal mb-1">Jane Doe</h2>
+          <span class="text-muted">
+          <p class="card-text mb-1"><span class="font-weight-bold">Gender</span> &#8212; Female</p>
+          <p class="card-text mb-1"><span class="font-weight-bold">Email</span> &#8212; Janedoe@gmail.com</p>
+          <p class="card-text mb-1"><span class="font-weight-bold">Qualification</span> &#8212; Graduate</p>
+        </span>
+        </div>
+      </div>
+</div>
 
+<div class="col-md-4 col-sm-12 mt-3">
+    <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h3 class="mb-0"><i class="fa fa-envelope mr-2" aria-hidden="true"></i>Address</h3>
+        </div>
+        <div class="card-body" style="height:150px">
+            <span class="text-muted">
+                <p class="card-text mb-1">{{item.address1}}</p>
+                  <p class="card-text mb-1">{{item.address2}} </p>
+                  <p class="card-text mb-1">{{item.address3}}</p>
+            <p class="card-text mb-1">{{item.city}} &#8212; {{item.pincode}}</p>
+            <p class="card-text mb-1">{{item.state}}</p>
+          </span>
+        </div>
+      </div>
+</div>
+
+<div class="col-md-4 col-sm-12 mt-3">
+    <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h3 class="mb-0"><i class="fa fa-credit-card mr-2" aria-hidden="true"></i>Bank Information</h3>
+        </div>
+        <div class="card-body" style="height:150px">
+            <span class="text-muted">
+         <p class="card-text mb-1"><span class="font-weight-bold">Bank</span> &#8212; {{item.bankname}}</p>
+         <p class="card-text mb-1"><span class="font-weight-bold">Branch</span> &#8212; {{item.branchname}}</p>
+         <p class="card-text mb-1"><span class="font-weight-bold">PAN #</span> &#8212; {{item.pancard}}</p>
+         <p class="card-text mb-1"><span class="font-weight-bold">IFSC Code</span> &#8212; {{item.ifsccode}}</p>
+          </span>
+        </div>
+      </div>
+</div>
+<!--
         <div class="agent-details-div">
             <label>Address Information</label>
             <mat-form-field class="agent-form-filed">
@@ -86,5 +136,6 @@ state: "Maharashtra"-->
                 <input readonly matInput value="{{item.ifsccode}}">
             </mat-form-field>
         </div>
+-->
     </div>
 </aside>

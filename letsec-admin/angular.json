@@ -34,10 +34,9 @@
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss",
               "src/assets/css/adminlte.css",
-              "src/assets/css/bootstrap.min.css",
-              "src/assets/css/font-awesome.min.css",
-              "src/assets/css/ionicons.css",
-              "src/assets/css/ionicons.min.css"
+              "src/assets/css/bootstrap.css",
+              "src/assets/css/font-awesome.min.css"
+   
             ],
             "scripts": []
           },
@@ -134,5 +133,8 @@
       }
     }
   },
-  "defaultProject": "letsec-admin"
+  "defaultProject": "letsec-admin",
+  "cli": {
+    "analytics": false
+  }
 }
