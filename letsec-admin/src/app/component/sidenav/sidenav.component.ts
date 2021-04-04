@@ -17,10 +17,7 @@ export class SidenavComponent implements OnInit {
   selectedItem: any;
   openTreeView!: Boolean;
   public menuOptions: Menulist[] = [
-    {name: 'Home', linkTo: '/home/dashboard', icon: 'fa fa-tachometer', tree: [{
-      name: 'Leads', linkTo: '/home/dashboard', icon: 'fa fa-money'}, {
-      name: 'Business', linkTo: '/home/dashboard', icon: 'fa fa-briefcase'}, {
-      name: 'Content', linkTo: '/home/dashboard', icon: 'fa fa-briefcase'}]},
+    {name: 'Home', linkTo: '/home/dashboard', icon: 'fa fa-tachometer', tree: []},
     {name: 'Agent managemant', linkTo: '/home/allagents', icon: 'fa fa-list-alt', tree: [{
       name: 'Approved agents', linkTo: '/settings', icon: 'fa fa-check-square-o'}, { 
       name: 'Denied Agents', linkTo: '/home/dashboard', icon: 'fa fa-times'}, {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatBadgeModule} from '@angular/material/badge';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,21 @@ import {MatBadgeModule} from '@angular/material/badge';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  toggleDropMenu: Boolean = false;
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  };
+
+  dropDownToggle() {
+    console.log("asdn");
+    this.toggleDropMenu = !this.toggleDropMenu;
   }
 
 }
