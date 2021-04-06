@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from  '../../interfaces/user';
+import { AuthServiceService} from '../../services/auth-service/auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -8,43 +10,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  agentLoginform: any = FormGroup;
+  loginForm: FormGroup;
+  isSubmitted  =  false;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private authService: AuthServiceService, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.agentLoginform = this.formBuilder.group({
-      username: ['', Validators.required],
+    this.loginForm  =  this.formBuilder.group({
+      email: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
 
-  onSubmit() {
-    // if(this.accountService.userValue){
-    //   this.accountService.flushUserdetails();
-    //  }
-    
-    // this.submitted = true;
+  get formControls() { return this.loginForm.controls; }
 
-    // this.alertService.clear();
-
-    if (this.agentLoginform.invalid) {
-        return;
+  login(){
+    console.log(this.loginForm.value);
+    this.isSubmitted = true;
+    if(this.loginForm.invalid){
+      return;
     }
-
-    // this.loading = true;
-    // this.agentService.login(this.agentLoginform.value)
-    //     .subscribe(data=>{
-    //         const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-    //         this.router.navigate(['/agent/dashboard']);
-    //       },
-    //       (error: HttpErrorResponse)=>{
-    //         this.unauthorised = true;
-    //         this.alertService.error(error.error);
-    //         this.loading = false;
-    //       });
-    //     }
-        this.router.navigate(['/agent/dashboard']);
+    this.authService.login(this.loginForm.value);
+    this.router.navigateByUrl('/admin');
   }
 
 }
