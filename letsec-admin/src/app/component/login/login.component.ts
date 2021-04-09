@@ -10,10 +10,10 @@ import { AuthServiceService} from '../../services/auth-service/auth-service.serv
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
-  isSubmitted  =  false;
+  loginForm: any = FormGroup;
+  isSubmitted = false;
 
-  constructor(private authService: AuthServiceService, private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private authService: AuthServiceService, private router: Router, private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.loginForm  =  this.formBuilder.group({
