@@ -47,6 +47,7 @@ export class AllagentsComponent implements OnInit {
       }
     });
     console.log(agentObj);
+    this.router.navigate(['home/mail']);
   };
 
   tableHeadingClick() {

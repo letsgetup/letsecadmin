@@ -6,6 +6,7 @@ import { HomeComponent } from '../../component/home/home.component';
 import { AgentdetailsComponent } from '../../component/agentdetails/agentdetails.component';
 import { ApprovedagentComponent } from '../../component/approvedagent/approvedagent.component';
 import { DeniedagentsComponent } from '../../component/deniedagents/deniedagents.component';
+import { MailComponent } from 'src/app/component/mail/mail.component';
 
 const routes: Routes = [
   { 
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'deniedagents',
         component: DeniedagentsComponent
+      },
+      {
+        path: 'mail',
+        component: MailComponent
       }
     ]
   }
