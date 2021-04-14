@@ -10,6 +10,7 @@ import { AllagentsComponent } from '../../component/allagents/allagents.componen
 import { MatTreeModule } from '@angular/material/tree';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatMenuModule} from '@angular/material/menu';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import {MatMenuModule} from '@angular/material/menu';
     DashboardRoutingModule,
     MatTreeModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class DashboardModule { }
