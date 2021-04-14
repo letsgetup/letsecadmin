@@ -11,6 +11,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MailComponent } from 'src/app/component/mail/mail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SidenavComponent, 
     HomeComponent, 
     HeaderComponent,
-    AllagentsComponent
+    AllagentsComponent,
+    MailComponent
   ],
   imports: [
     CommonModule,
