@@ -28,12 +28,12 @@
                                     <button 
                                         (click)="item.status === 3 ? '' : agentApprovalDenyClk(item, 3)" 
                                         [ngClass]="[item.status === 3 ? 'approved-btn' : 'approve-btn', item.status === 2 ? 'tohide' : 'toshow' ]">
-                                        <i class="fa fa-check-circle mr-2" aria-hidden="true"></i>{{item.status === 3 ? 'Approved' : 'Approve'}}
+                                        <i class="fa fa-check-circle mr-2" aria-hidden="true"></i>{{item.status === 3 ? 'Approved' : 'Pending approval'}}
                                     </button>
                                     <button 
                                         [ngClass]="[item.status === 3 ? 'tohide' : 'toshow', item.status === 2 ? 'denied-btn' : 'deny-btn'] " 
                                         (click)="item.status === 2 ? '' : agentApprovalDenyClk(item, 2)">
-                                        <i class="fa fa-ban mr-2" aria-hidden="true"></i>{{item.status == 2 ? 'Denied' : 'Deny'}}
+                                        <i class="fa fa-ban mr-2" aria-hidden="true"></i>{{item.status == 2 ? 'Denied' : 'Pending approval'}}
                                     </button>
                                 </td>
                             </tr>

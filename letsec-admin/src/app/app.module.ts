@@ -20,6 +20,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ApprovedagentComponent } from './component/approvedagent/approvedagent.component';
 import { DeniedagentsComponent } from './component/deniedagents/deniedagents.component';
+// import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DeniedagentsComponent } from './component/deniedagents/deniedagents.com
     HttpClientModule,
     MatInputModule,
     MatFormFieldModule,
-    NgHttpLoaderModule.forRoot()
+    NgHttpLoaderModule.forRoot(),
+    // NgxPaginationModule
     // MatTreeFlatDataSource,
     // MatTreeFlattener,
     // MatListModule

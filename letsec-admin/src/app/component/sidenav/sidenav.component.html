@@ -11,9 +11,11 @@
               <a (click)="menu.tree.length == 0 ? navigatedToPage($event, menu) : openCollapse($event, menu.tree) ; navigatedToPage($event, menu) ">
                 <i class={{menu.icon}} aria-hidden="true"></i> 
                 <span>{{menu.name}}</span> 
-                <i [ngClass]="[!openTreeView ? 'fa fa-chevron-down sub-menu-chev' : 'fa fa-chevron-up sub-menu-chev']" [ngStyle]="{'display': menu.tree.length == 0 ? 'none' : 'inline-block' }" aria-hidden="true"></i> 
+                <!-- <i [ngClass]="[!openTreeView ? 'fa fa-chevron-down sub-menu-chev' : 'fa fa-chevron-up sub-menu-chev']" [ngStyle]="{'display': menu.tree.length == 0 ? 'none' : 'inline-block' }" aria-hidden="true"></i>  -->
+                <i [ngClass]="'fa fa-chevron-down sub-menu-chev'" [ngStyle]="{'display': menu.tree.length == 0 ? 'none' : 'inline-block' }" aria-hidden="true"></i> 
               </a> 
-              <div *ngIf="openTreeView">
+              <!-- <div *ngIf="openTreeView"> -->
+              <div>
                 <div *ngFor="let item of menu.tree">
                   <a class="sub-menu" (click)="navigatedToPage($event, item)">
                     <i class={{item.icon}} aria-hidden="true"></i> 
