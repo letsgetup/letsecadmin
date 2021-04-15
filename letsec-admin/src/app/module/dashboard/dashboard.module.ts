@@ -10,6 +10,8 @@ import { AllagentsComponent } from '../../component/allagents/allagents.componen
 import { MatTreeModule } from '@angular/material/tree';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatMenuModule} from '@angular/material/menu';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MailComponent } from 'src/app/component/mail/mail.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,17 @@ import {MatMenuModule} from '@angular/material/menu';
     SidenavComponent, 
     HomeComponent, 
     HeaderComponent,
-    AllagentsComponent
+    AllagentsComponent,
+    MailComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     MatTreeModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class DashboardModule { }
