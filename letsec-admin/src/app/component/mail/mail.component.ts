@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
     styleUrls: ['./mail.component.scss']
 })
 export class MailComponent implements OnInit {
-    mailForm: FormGroup;
+    mailForm: any = FormGroup;
 
 
     constructor(private formBuilder: FormBuilder) {

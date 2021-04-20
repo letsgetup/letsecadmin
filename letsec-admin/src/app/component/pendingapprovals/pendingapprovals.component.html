@@ -1,7 +1,7 @@
 
 <aside class="right-side"> 
     <section class="content-header">
-        <h1 style="display: inline-block"> Appropved Agents</h1>
+        <h1 style="display: inline-block"> Pending Approval Agents</h1>
     </section>
     <section class="content"> 
         
@@ -17,7 +17,7 @@
                                 <th (click)="tableHeadingClick()">Mobile</th>
                                 <th></th>
                             </tr>
-                            <tr *ngFor="let item of approvedAgentList; let i = index">
+                            <tr *ngFor="let item of pendingAgentLs; let i = index">
                                 <td align="center">{{i +1}}</td>
                                 <td><a (click)="agentDetailsRoute(item)" class="name-td">{{item.firstname}} {{item.middlename}} {{item.lastname}}</a></td>
                                 <td>{{item.email}}</td>

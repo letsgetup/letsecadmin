@@ -36,6 +36,9 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+  routeToPendingDetails () {
+    this.router.navigate(['home/pendingApprovals']);
+  }
 
   routeToDetails() {
     this.router.navigate(['home/allagents']);

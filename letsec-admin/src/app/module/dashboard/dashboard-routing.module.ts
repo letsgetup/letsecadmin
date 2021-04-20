@@ -7,6 +7,7 @@ import { AgentdetailsComponent } from '../../component/agentdetails/agentdetails
 import { ApprovedagentComponent } from '../../component/approvedagent/approvedagent.component';
 import { DeniedagentsComponent } from '../../component/deniedagents/deniedagents.component';
 import { MailComponent } from 'src/app/component/mail/mail.component';
+import { PendingapprovalsComponent } from '../../component/pendingapprovals/pendingapprovals.component';
 
 const routes: Routes = [
   { 
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path: 'mail',
         component: MailComponent
+      },
+      {
+        path: 'pendingApprovals',
+        component: PendingapprovalsComponent
       }
     ]
   }

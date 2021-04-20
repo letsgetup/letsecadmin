@@ -58,5 +58,17 @@ export class DataServiceService {
 		return this.deniedAgent;
 	}
 
+	// Pending agent data service
+	private pendingAgent = new BehaviorSubject([]);
+	pendingAgentObs = this.pendingAgent.asObservable();
+
+	// Pending agent data
+	pendingAgentData(pendingAgentDataItms: any) {
+		this.pendingAgent.next(pendingAgentDataItms);
+	}
+	pendingAgentDataDataChange() {
+		return this.pendingAgent;
+	}
+
 
 }

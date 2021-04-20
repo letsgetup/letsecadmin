@@ -20,6 +20,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ApprovedagentComponent } from './component/approvedagent/approvedagent.component';
 import { DeniedagentsComponent } from './component/deniedagents/deniedagents.component';
+import { PendingapprovalsComponent } from './component/pendingapprovals/pendingapprovals.component';
 // import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { DeniedagentsComponent } from './component/deniedagents/deniedagents.com
     AgentdetailsComponent,
     ApprovedagentComponent,
     DeniedagentsComponent,
+    PendingapprovalsComponent,
   ],
   imports: [
     BrowserModule,
