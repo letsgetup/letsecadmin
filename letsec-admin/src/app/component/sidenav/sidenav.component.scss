@@ -1,10 +1,10 @@
-.selected {
+.selected .anchor-side {
     background: #3c8dbc;
     span {
         color: #fff;
     }
 }
-.selected a:hover {
+.selected .anchor-side:hover {
     background: #3c8dbc !important;
     span {
         color: #fff;

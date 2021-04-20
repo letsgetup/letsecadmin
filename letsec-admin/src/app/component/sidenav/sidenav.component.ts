@@ -19,7 +19,6 @@ export class SidenavComponent implements OnInit {
   openTreeView!: Boolean;
   public menuOptions: Menulist[] = [
     {name: 'Home', linkTo: '/home/dashboard', icon: 'fa fa-tachometer', tree: []},
-    // {name: 'Dashboard', linkTo: '/home/dashboard', icon: 'fa fa-tachometer', tree: []},
     {name: 'Agent managemant', linkTo: '/home/allagents', icon: 'fa fa-list-alt', tree: [{
       name: 'Approved agents', linkTo: '/home/approvedagents', icon: 'fa fa-check-square-o'}, { 
       name: 'Denied Agents', linkTo: '/home/deniedagents', icon: 'fa fa-times'}]},
@@ -45,11 +44,11 @@ export class SidenavComponent implements OnInit {
   }
 
   openCollapse(e: any, tree: any) {
-    console.log(e, tree);
+    // console.log(e, tree);
     let a = this.menuOptions.filter(itm => itm.tree == tree);
-    console.log(a);
+    // console.log(a);
     if(tree == a[0].tree) {
-      console.log(a);
+      // console.log(a);
       this.openTreeView = !this.openTreeView;
     }
   }
