@@ -48,7 +48,7 @@ a:focus {
 }
 /*left side - contains sidebar*/
 .left-side {
-  position: absolute;
+  position: fixed;
   width: 220px;
   top: 0;
 }
