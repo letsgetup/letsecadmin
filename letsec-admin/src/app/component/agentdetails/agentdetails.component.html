@@ -1,141 +1,83 @@
-<!-- aadharcard: "7678675738789878"
-accountnumber: "9999999999999"
-accounttype: "bhari acc"
-address1: "Address line 1"
-address2: "ddsaffghjrtgfb"
-address3: "trrffgggytrd"
-agentid: "AGNT-210302235319"
-bankname: "Mazi bank"
-branchname: "Mazya Gallitli"
-city: "Latur"
-createdat: "2021-03-02T23:53:20"
-dob: "1900-02-27T00:00:00"
-document1: "NONE"
-document2: "yestofffffffffffffffffffffffffffffffff"
-document3: "yestofffffffffffffffff"
-document4: "yestofffffffffffffffffffffffff"
-email: "nikhildev@test.com"
-extramobile: "4345656767"
-firstname: "Nik1"
-gender: "male"
-gsTnumber: "tght56545y"
-hash: "hash"
-id: 1
-ifsccode: "MAZA0003655"
-password: "pass123"
-pincode: "413517"
-state: "Maharashtra"-->
-<aside class="right-side">
+<aside class="right-side mb-4">
     <div *ngFor="let item of agentDetailArr; let i = index" class="row m-0">
-        <!--
-        <div class="agent-details-div">
-            <label>Personal Information</label>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Name</mat-label>
-                <input readonly matInput value="{{item.firstname}} {{item.middlename}} {{item.lastname}}">
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Gender</mat-label>
-                <input readonly matInput value={{item.gender}}>
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Email</mat-label>
-                <input readonly matInput value={{item.email}}>
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Qualification</mat-label>
-                <input readonly matInput value="{{item.qualification}}">
-            </mat-form-field>
-        </div>
--->
-<div class="col-md-4 col-sm-12 mt-3">
-    <div class="card shadow-sm">
-        <div class="card-header bg-success text-white">
-            <h3 class="mb-0"><i _ngcontent-swk-c133="" aria-hidden="true" class="fa fa-user mr-2"></i>Personal Information</h3>
-        </div>
-        <div class="card-body" style="height:150px">
-          <h2 class="font-weight-normal mb-1">Jane Doe</h2>
-          <span class="text-muted">
-          <p class="card-text mb-1"><span class="font-weight-bold">Gender</span> &#8212; Female</p>
-          <p class="card-text mb-1"><span class="font-weight-bold">Email</span> &#8212; Janedoe@gmail.com</p>
-          <p class="card-text mb-1"><span class="font-weight-bold">Qualification</span> &#8212; Graduate</p>
-        </span>
-        </div>
-      </div>
-</div>
 
-<div class="col-md-4 col-sm-12 mt-3">
-    <div class="card shadow-sm">
-        <div class="card-header bg-success text-white">
-            <h3 class="mb-0"><i class="fa fa-envelope mr-2" aria-hidden="true"></i>Address</h3>
-        </div>
-        <div class="card-body" style="height:150px">
-            <span class="text-muted">
-                <p class="card-text mb-1">{{item.address1}}</p>
-                  <p class="card-text mb-1">{{item.address2}} </p>
-                  <p class="card-text mb-1">{{item.address3}}</p>
-            <p class="card-text mb-1">{{item.city}} &#8212; {{item.pincode}}</p>
-            <p class="card-text mb-1">{{item.state}}</p>
-          </span>
-        </div>
-      </div>
-</div>
-
-<div class="col-md-4 col-sm-12 mt-3">
-    <div class="card shadow-sm">
-        <div class="card-header bg-success text-white">
-            <h3 class="mb-0"><i class="fa fa-credit-card mr-2" aria-hidden="true"></i>Bank Information</h3>
-        </div>
-        <div class="card-body" style="height:150px">
-            <span class="text-muted">
-         <p class="card-text mb-1"><span class="font-weight-bold">Bank</span> &#8212; {{item.bankname}}</p>
-         <p class="card-text mb-1"><span class="font-weight-bold">Branch</span> &#8212; {{item.branchname}}</p>
-         <p class="card-text mb-1"><span class="font-weight-bold">PAN #</span> &#8212; {{item.pancard}}</p>
-         <p class="card-text mb-1"><span class="font-weight-bold">IFSC Code</span> &#8212; {{item.ifsccode}}</p>
-          </span>
-        </div>
-      </div>
-</div>
-<!--
-        <div class="agent-details-div">
-            <label>Address Information</label>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Complete address</mat-label>
-                <input readonly matInput value="{{item.address1}} {{item.address2}} {{item.address3}}">
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>City</mat-label>
-                <input readonly matInput value={{item.city}}>
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>State</mat-label>
-                <input readonly matInput value={{item.state}}>
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Pincode</mat-label>
-                <input readonly matInput value={{item.pincode}}>
-            </mat-form-field>
+        <div class="col-sm-12 mt-3">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0"><i _ngcontent-swk-c133="" aria-hidden="true" class="fa fa-user mr-2"></i>Personal Information</h3>
+                </div>
+                <div class="card-body" style="height:150px">
+                <h2 class="font-weight-normal mb-1">Jane Doe</h2>
+                <span class="text-muted">
+                <p class="card-text mb-1"><span class="font-weight-bold">Gender</span> &#8212; Female</p>
+                <p class="card-text mb-1"><span class="font-weight-bold">Email</span> &#8212; Janedoe@gmail.com</p>
+                <p class="card-text mb-1"><span class="font-weight-bold">Qualification</span> &#8212; Graduate</p>
+                </span>
+                </div>
+            </div>
         </div>
 
-        <div class="agent-details-div">
-            <label>Bank Information</label>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Bank name</mat-label>
-                <input readonly matInput value={{item.bankname}}>
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>Branch name</mat-label>
-                <input readonly matInput value={{item.branchname}}>
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>PAN Card</mat-label>
-                <input readonly matInput value={{item.pancard}}>
-            </mat-form-field>
-            <mat-form-field class="agent-form-filed">
-                <mat-label>IFSC</mat-label>
-                <input readonly matInput value="{{item.ifsccode}}">
-            </mat-form-field>
+        <div class="col-sm-12 mt-3">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0"><i class="fa fa-envelope mr-2" aria-hidden="true"></i>Address</h3>
+                </div>
+                <div class="card-body" style="height:150px">
+                    <span class="text-muted">
+                        <p class="card-text mb-1">{{item.address1}}</p>
+                        <p class="card-text mb-1">{{item.address2}} </p>
+                        <p class="card-text mb-1">{{item.address3}}</p>
+                        <p class="card-text mb-1">{{item.city}} &#8212; {{item.pincode}}</p>
+                        <p class="card-text mb-1">{{item.state}}</p>
+                    </span>
+                </div>
+            </div>
         </div>
--->
+
+        <div class="col-sm-12 mt-3">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0"><i class="fa fa-credit-card mr-2" aria-hidden="true"></i>Bank Information</h3>
+                </div>
+                <div class="card-body" style="height:150px">
+                    <span class="text-muted">
+                <p class="card-text mb-1"><span class="font-weight-bold">Bank</span> &#8212; {{item.bankname}}</p>
+                <p class="card-text mb-1"><span class="font-weight-bold">Branch</span> &#8212; {{item.branchname}}</p>
+                <p class="card-text mb-1"><span class="font-weight-bold">PAN #</span> &#8212; {{item.pancard}}</p>
+                <p class="card-text mb-1"><span class="font-weight-bold">IFSC Code</span> &#8212; {{item.ifsccode}}</p>
+                </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 mt-3">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0"><i class="fa fa-credit-card mr-2" aria-hidden="true"></i>Documents</h3>
+                </div>
+                <div class="card-body" style="height:150px; display: flex;">
+                    <div class="doc-div">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <span>PAN</span>
+                    </div>
+                    <div class="doc-div">
+                        <i class="fa fa-file-text" aria-hidden="true"></i>
+                        <span>UID</span>
+                    </div>
+                    <div class="doc-div">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <span>Document name</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="details-footer pb-5 mt-4 mr-4">
+        <button class="approve-btn">
+            <i class="fa fa-check-circle mr-2" aria-hidden="true"></i>Approve
+        </button>
+        <button class="deny-btn">
+            <i class="fa fa-ban mr-2" aria-hidden="true"></i>Deny
+        </button>
     </div>
 </aside>
