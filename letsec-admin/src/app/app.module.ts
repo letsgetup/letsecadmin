@@ -22,6 +22,7 @@ import { ApprovedagentComponent } from './component/approvedagent/approvedagent.
 import { DeniedagentsComponent } from './component/deniedagents/deniedagents.component';
 import { PendingapprovalsComponent } from './component/pendingapprovals/pendingapprovals.component';
 // import { NgxPaginationModule } from 'ngx-pagination';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,8 @@ import { PendingapprovalsComponent } from './component/pendingapprovals/pendinga
     MatInputModule,
     MatFormFieldModule,
     NgHttpLoaderModule.forRoot(),
+    MatDialogModule,
+    // MatDialogRef
     // NgxPaginationModule
     // MatTreeFlatDataSource,
     // MatTreeFlattener,

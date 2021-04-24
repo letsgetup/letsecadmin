@@ -72,3 +72,23 @@
 .approve-btn:hover, .deny-btn:hover {
     opacity: 0.7;
 }
+
+.dialog-footer {
+    .cancel-btn, .done-btn {
+        background: #28a744;
+        border: none;
+        // border-radius: 2px;
+        color: #FFF;
+        font-size: 14px;
+        padding: 8px 15px;
+        width: 100px;
+        outline: none;
+        float: right;
+    }
+    .cancel-btn {
+        background: #f4511e;
+    }
+    .done-btn {
+        
+    }
+}
